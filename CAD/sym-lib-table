@@ -1,0 +1,5 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "soilmoisture-rescue")(type "KiCad")(uri "${KIPRJMOD}/soilmoisture-rescue.kicad_sym")(options "")(descr ""))
+  (lib (name "soilmoist")(type "KiCad")(uri "${KIPRJMOD}/libraries/soilmoist.kicad_sym")(options "")(descr ""))
+)
