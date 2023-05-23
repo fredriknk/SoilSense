@@ -1,0 +1,29 @@
+[package]
+name = "nrf52840-dk-bsp"
+version = "0.2.0"
+description = "BSP for the nRF52840-DK"
+edition = "2018"
+
+authors = ["Noah Hüsser <yatekii@yatekii.ch>"]
+categories = ["embedded", "hardware-support", "no-std"]
+keywords = ["arm", "cortex-m", "nrf52", "hal"]
+license = "MIT OR Apache-2.0"
+
+readme = "./README.md"
+repository = "https://github.com/nrf-rs/nrf52840-dk"
+
+[dependencies]
+cortex-m = "0.7"
+embedded-hal = "0.2"
+nrf52840-hal = "0.13.0"
+
+[dev-dependencies]
+cortex-m-rt = ">=0.6, <0.8"
+nb = "1.0.0"
+panic-halt = "0.2.0"
+panic-rtt-target = { version = "0.1.2", features = ["cortex-m"] }
+rtt-target = { version = "0.3.1", features = ["cortex-m"] }
+
+[features]
+rt = ["nrf52840-hal/rt"]
+default = ["rt"]
