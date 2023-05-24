@@ -29,9 +29,9 @@ fn main() -> ! {
 
     // Alternately flash the red and blue leds
     loop {
-        rprintln!("LED1");
+        rprintln!("SOILSENSE");
         delay(&mut timer, 1_000_000); // 250ms
-        rprintln!("LED2");
+        rprintln!("SILSENSE2");
         delay(&mut timer, 1_000_000); // 1s
     }
 }
