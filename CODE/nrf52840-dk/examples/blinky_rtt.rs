@@ -29,9 +29,13 @@ fn main() -> ! {
 
     // Alternately flash the red and blue leds
     loop {
-        rprintln!("SOILSENSE");
+        rprintln!("DEVLED1");
+        nrf52.oscs.Osc_pow.enable();
+        nrf52.oscs.Osc_enbl.enable();
         delay(&mut timer, 1_000_000); // 250ms
-        rprintln!("SILSENSE2");
+        rprintln!("DEVLED2");
+        nrf52.oscs.Osc_pow.disable();
+        nrf52.oscs.Osc_enbl.disable();
         delay(&mut timer, 1_000_000); // 1s
     }
 }
