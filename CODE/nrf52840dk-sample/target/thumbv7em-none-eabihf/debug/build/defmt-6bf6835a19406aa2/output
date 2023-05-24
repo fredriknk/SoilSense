@@ -1,0 +1,1 @@
+cargo:rustc-link-search=C:\Users\fnk\Documents\KiCad\Projects\SoilSense\CODE\nrf52840dk-sample\target\thumbv7em-none-eabihf\debug\build\defmt-6bf6835a19406aa2\out

@@ -1,0 +1,3 @@
+cargo:rustc-link-search=C:\Users\fnk\Documents\KiCad\Projects\SoilSense\CODE\nrf52840dk-sample\target\debug\build\cortex-m-rt-698bafda164af690\out
+cargo:rerun-if-changed=build.rs
+cargo:rerun-if-changed=link.x.in

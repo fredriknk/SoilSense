@@ -16,7 +16,7 @@ You will require the `thumbv7em-none-eabihf` target installed. To build one of t
 $ rustup target add thumbv7em-none-eabihf
 $ git clone https://github.com/nrf-rs/nrf52840-DK.git
 $ cd nrf52840-DK
-$ cargo build --target=thumbv7em-none-eabihf --example blinky
+$ cargo run --example blinky
 ```
 
 To use in your own application, add as a dependency and call the
