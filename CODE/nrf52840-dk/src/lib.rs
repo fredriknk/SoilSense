@@ -31,21 +31,6 @@ pub struct Board {
     /// The nRF52's pins which are not otherwise occupied on the nRF52840-DK
     pub pins: Pins,
 
-    /// The nRF52840-DK UART which is wired to the virtual USB CDC port
-    pub cdc: Uarte<nrf52::UARTE0>,
-
-    /// The nRF52840-DK SPI which is wired to the SPI flash
-    pub flash: Spim<nrf52::SPIM2>,
-    pub flash_cs: Pin<Output<PushPull>>,
-
-    /// The LEDs on the nRF52840-DK board
-    pub leds: Leds,
-
-    /// The buttons on the nRF52840-DK board
-    pub buttons: Buttons,
-
-    pub nfc: NFC,
-
     /// Core peripheral: Cache and branch predictor maintenance operations
     pub CBP: nrf52::CBP,
 
@@ -288,43 +273,11 @@ impl Board {
     fn new(cp: CorePeripherals, p: Peripherals) -> Self {
         let pins0 = p0::Parts::new(p.P0);
         let pins1 = p1::Parts::new(p.P1);
-
-        // The nRF52840-DK has an 64MB SPI flash on board which can be interfaced through SPI or Quad SPI.
-        // As for now, only the normal SPI mode is available, so we are using this for the interface.
-        let flash_spim = Spim::new(
-            p.SPIM2,
-            spim::Pins {
-                sck: pins0.p0_19.into_push_pull_output(Level::Low).degrade(),
-                mosi: Some(pins0.p0_20.into_push_pull_output(Level::Low).degrade()),
-                miso: Some(pins0.p0_21.into_floating_input().degrade()),
-            },
-            Frequency::K500,
-            MODE_0,
-            0,
-        );
-
-        let flash_cs = pins0.p0_17.into_push_pull_output(Level::High).degrade();
-
         // The nRF52840-DK features an USB CDC port.
         // It features HWFC but does not have to use it.
         // It can transmit a flexible baudrate of up to 1Mbps.
-        let cdc_uart = Uarte::new(
-            p.UARTE0,
-            uarte::Pins {
-                txd: pins0.p0_06.into_push_pull_output(Level::High).degrade(),
-                rxd: pins0.p0_08.into_floating_input().degrade(),
-                cts: Some(pins0.p0_07.into_floating_input().degrade()),
-                rts: Some(pins0.p0_05.into_push_pull_output(Level::High).degrade()),
-            },
-            UartParity::EXCLUDED,
-            UartBaudrate::BAUD115200,
-        );
 
         Board {
-            cdc: cdc_uart,
-            flash: flash_spim,
-            flash_cs,
-
             pins: Pins {
                 P0_03: pins0.p0_03,
                 P0_04: pins0.p0_04,
@@ -353,25 +306,6 @@ impl Board {
                 P1_13: pins1.p1_13,
                 P1_14: pins1.p1_14,
                 P1_15: pins1.p1_15,
-            },
-
-            leds: Leds {
-                led_1: Led::new(pins0.p0_13.degrade()),
-                led_2: Led::new(pins0.p0_14.degrade()),
-                led_3: Led::new(pins0.p0_15.degrade()),
-                led_4: Led::new(pins0.p0_16.degrade()),
-            },
-
-            buttons: Buttons {
-                button_1: Button::new(pins0.p0_11.degrade()),
-                button_2: Button::new(pins0.p0_12.degrade()),
-                button_3: Button::new(pins0.p0_24.degrade()),
-                button_4: Button::new(pins0.p0_25.degrade()),
-            },
-
-            nfc: NFC {
-                nfc_1: pins0.p0_09,
-                nfc_2: pins0.p0_10,
             },
 
             // Core peripherals

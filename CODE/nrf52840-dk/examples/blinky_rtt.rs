@@ -30,10 +30,8 @@ fn main() -> ! {
     // Alternately flash the red and blue leds
     loop {
         rprintln!("LED1");
-        nrf52.leds.led_2.enable();
         delay(&mut timer, 1_000_000); // 250ms
         rprintln!("LED2");
-        nrf52.leds.led_2.disable();
         delay(&mut timer, 1_000_000); // 1s
     }
 }
