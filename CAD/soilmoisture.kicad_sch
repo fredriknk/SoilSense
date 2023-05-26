@@ -2220,6 +2220,31 @@
     )
   )
 
+  (symbol (lib_id "power:GND") (at 151.13 101.6 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 1504a700-b1e3-4bc2-a257-d568430223ee)
+    (property "Reference" "#PWR019" (at 151.13 107.95 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND" (at 151.257 105.9942 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 151.13 101.6 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 151.13 101.6 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 91d3574e-3850-4df8-baae-ee79deb8eb29))
+    (instances
+      (project "soilmoisture"
+        (path "/0d83ea7b-58b2-465b-bd1b-b8fa23c41812"
+          (reference "#PWR019") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "power:VDD") (at 259.08 83.185 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 33c6c1f6-3d5e-463f-b51e-695aa79403c0)
@@ -2265,6 +2290,31 @@
       (project "soilmoisture"
         (path "/0d83ea7b-58b2-465b-bd1b-b8fa23c41812"
           (reference "#PWR017") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:GND") (at 133.35 101.6 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 397dd491-9601-4534-97a2-e55affcbc3b1)
+    (property "Reference" "#PWR018" (at 133.35 107.95 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND" (at 133.477 105.9942 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 133.35 101.6 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 133.35 101.6 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid b0e8567b-a1f3-458a-be3b-510262df56db))
+    (instances
+      (project "soilmoisture"
+        (path "/0d83ea7b-58b2-465b-bd1b-b8fa23c41812"
+          (reference "#PWR018") (unit 1)
         )
       )
     )
@@ -2382,6 +2432,31 @@
     )
   )
 
+  (symbol (lib_id "power:GND") (at 115.57 101.6 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 9b4e5e2a-731c-44fe-844e-3f18eeed0965)
+    (property "Reference" "#PWR012" (at 115.57 107.95 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND" (at 115.697 105.9942 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 115.57 101.6 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 115.57 101.6 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 6c52808e-7acf-4e1c-9e03-ac8931f9096b))
+    (instances
+      (project "soilmoisture"
+        (path "/0d83ea7b-58b2-465b-bd1b-b8fa23c41812"
+          (reference "#PWR012") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "Device:C") (at 35.56 55.245 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid a23a8831-6ff9-4100-a03d-76686a6430ed)
@@ -2460,6 +2535,31 @@
       (project "soilmoisture"
         (path "/0d83ea7b-58b2-465b-bd1b-b8fa23c41812"
           (reference "#PWR05") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:GND") (at 97.79 101.6 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid c3d2cbd1-fb65-45ba-b2eb-ed12c876433b)
+    (property "Reference" "#PWR09" (at 97.79 107.95 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND" (at 97.917 105.9942 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 97.79 101.6 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 97.79 101.6 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid bd103a9d-93eb-4108-92ab-583d06d6f7c3))
+    (instances
+      (project "soilmoisture"
+        (path "/0d83ea7b-58b2-465b-bd1b-b8fa23c41812"
+          (reference "#PWR09") (unit 1)
         )
       )
     )

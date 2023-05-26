@@ -1,0 +1,29 @@
+{
+	"folders": [
+		{
+			"path": "arm/nrf52840soilsense_nrf52840"
+		},
+		{
+			"name": "hello_world",
+			"path": "hello_world"
+		},
+		{
+			"name": "blinky",
+			"path": "blinky"
+		},
+		{
+			"name": "adc",
+			"path": "adc"
+		}
+	],
+	"settings": {
+		"nrf-connect.toolchain.path": "${nrf-connect.toolchain:2.3.0}",
+		"nrf-connect.debugging.bindings": {
+			"c:/Users/fnk/Documents/KiCad/Projects/SoilSense/CODE/blinky/build": "Launch blinky\\build"
+		},
+		"files.associations": {
+			"device.h": "c",
+			"adc.h": "c"
+		}
+	}
+}
