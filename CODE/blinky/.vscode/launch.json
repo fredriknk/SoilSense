@@ -1,0 +1,12 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"type": "nrf-connect",
+			"request": "launch",
+			"name": "Launch blinky\\build",
+			"config": "c:/Users/fnk/Documents/KiCad/Projects/SoilSense/CODE/blinky/build",
+			"runToEntryPoint": "main"
+		}
+	]
+}
